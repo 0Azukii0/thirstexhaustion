@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.azukii.thirstexhaustion.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "ExhaustionSystemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

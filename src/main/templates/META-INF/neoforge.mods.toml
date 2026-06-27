@@ -1,0 +1,42 @@
+license="${mod_license}"
+
+[[mods]]
+
+modId="${mod_id}"
+
+version="${mod_version}"
+
+displayName="${mod_name}"
+
+authors="Azukii"
+
+description='''
+Modify the base game's exhaustion mechanic to align it with a new mechanic: thirst.
+'''
+
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+[[mixins]]
+config="${mod_id}.mixins.appleskin.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="appleskin"
+    mandatory=false
+    versionRange="[3.0,)"
+    ordering="AFTER"
+    side="CLIENT"

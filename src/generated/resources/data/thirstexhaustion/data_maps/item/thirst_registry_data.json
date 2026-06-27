@@ -1,0 +1,68 @@
+{
+  "values": {
+    "minecraft:apple": {
+      "context": "CLEAN",
+      "level": 1
+    },
+    "minecraft:beetroot_soup": {
+      "context": "CLEAN",
+      "level": 3
+    },
+    "minecraft:chorus_fruit": {
+      "context": "CLEAN",
+      "level": 1
+    },
+    "minecraft:enchanted_golden_apple": {
+      "context": "CLEAN",
+      "level": 10
+    },
+    "minecraft:glow_berries": {
+      "context": "CLEAN",
+      "level": 1
+    },
+    "minecraft:golden_apple": {
+      "context": "CLEAN",
+      "level": 10
+    },
+    "minecraft:melon_slice": {
+      "context": "CLEAN",
+      "level": 1
+    },
+    "minecraft:milk_bucket": {
+      "context": "CLEAN",
+      "level": 2
+    },
+    "minecraft:mushroom_stew": {
+      "context": "CLEAN",
+      "level": 3
+    },
+    "minecraft:potion": {
+      "context": "DIRTY",
+      "level": 4
+    },
+    "minecraft:rabbit_stew": {
+      "context": "CLEAN",
+      "level": 3
+    },
+    "minecraft:suspicious_stew": {
+      "context": "CLEAN",
+      "level": 1
+    },
+    "minecraft:sweet_berries": {
+      "context": "CLEAN",
+      "level": 1
+    },
+    "thirstexhaustion:clean_water_bottle": {
+      "context": "CLEAN",
+      "level": 4
+    },
+    "thirstexhaustion:clean_water_bowl": {
+      "context": "CLEAN",
+      "level": 3
+    },
+    "thirstexhaustion:water_bowl": {
+      "context": "DIRTY",
+      "level": 2
+    }
+  }
+}

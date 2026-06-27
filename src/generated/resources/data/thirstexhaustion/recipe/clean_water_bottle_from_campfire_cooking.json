@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 300,
+  "experience": 0.35,
+  "ingredient": {
+    "neoforge:ingredient_type": "neoforge:components",
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "minecraft:water"
+      }
+    },
+    "items": "minecraft:potion"
+  },
+  "result": {
+    "id": "thirstexhaustion:clean_water_bottle"
+  }
+}
