@@ -1,4 +1,4 @@
-package com.azukii.thirstexhaustion.client.config;
+package com.azukii.thirstexhaustion.config;
 
 import com.mojang.serialization.MapCodec;
 import net.neoforged.neoforge.common.conditions.ICondition;

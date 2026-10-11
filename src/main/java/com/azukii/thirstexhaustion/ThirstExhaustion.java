@@ -1,7 +1,7 @@
 package com.azukii.thirstexhaustion;
 
-import com.azukii.thirstexhaustion.client.config.ThirstExhaustionCommonConfig;
-import com.azukii.thirstexhaustion.client.config.ThirstExhaustionStartupConfig;
+import com.azukii.thirstexhaustion.config.ThirstExhaustionCommonConfig;
+import com.azukii.thirstexhaustion.config.ThirstExhaustionStartupConfig;
 import com.azukii.thirstexhaustion.registry.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.Direction;

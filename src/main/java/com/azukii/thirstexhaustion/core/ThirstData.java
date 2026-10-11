@@ -1,6 +1,6 @@
 package com.azukii.thirstexhaustion.core;
 
-import com.azukii.thirstexhaustion.client.config.ThirstExhaustionCommonConfig;
+import com.azukii.thirstexhaustion.config.ThirstExhaustionCommonConfig;
 import com.azukii.thirstexhaustion.registry.ModAttachments;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -112,15 +112,8 @@ public class ThirstData implements ValueIOSerializable {
     }
 
     private void addHungerEffect(ServerPlayer player, WaterDrinkingContext context) {
-        if (context == WaterDrinkingContext.OCEAN) player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 600, 2));
-
-        int random = player.level().getRandom().nextInt(100);
-        if (context == WaterDrinkingContext.RIVER && random > 90)
-            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 100, 0));
-        if (context == WaterDrinkingContext.DIRTY && random > 75)
-            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 200, 0));
-        if (context == WaterDrinkingContext.STILL_WATER && random > 50)
-            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 400, 0));
+        if (player.level().getRandom().nextInt(100) < context.hungerChance().getAsInt())
+            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 400, 1));
     }
 
     public void ensureInitialized() {

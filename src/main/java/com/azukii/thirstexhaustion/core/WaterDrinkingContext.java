@@ -1,6 +1,6 @@
 package com.azukii.thirstexhaustion.core;
 
-import com.azukii.thirstexhaustion.client.config.ThirstExhaustionCommonConfig;
+import com.azukii.thirstexhaustion.config.ThirstExhaustionCommonConfig;
 import com.mojang.serialization.Codec;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
@@ -32,5 +32,9 @@ public enum WaterDrinkingContext {
 
     WaterDrinkingContext(IntSupplier hungerChance) {
         this.hungerChance = hungerChance;
+    }
+
+    public IntSupplier hungerChance() {
+        return hungerChance;
     }
 }

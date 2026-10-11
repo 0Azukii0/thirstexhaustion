@@ -1,6 +1,5 @@
 package com.azukii.thirstexhaustion.component;
 
-import com.azukii.thirstexhaustion.client.datagen.ModDataMapProvider;
 import com.azukii.thirstexhaustion.core.WaterDrinkingContext;
 import com.azukii.thirstexhaustion.registry.ModComponents;
 import com.azukii.thirstexhaustion.registry.ModDataMaps;
@@ -10,6 +9,7 @@ import io.netty.buffer.ByteBuf;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.tags.BiomeTags;
@@ -45,7 +45,7 @@ public record ThirstComponent(int level, WaterDrinkingContext context) implement
         ThirstComponent component = stack.get(ModComponents.THIRST);
         if (component != null) return component;
 
-        return ModDataMapProvider.getHolder(stack.getItem()).getData(ModDataMaps.THIRST_REGISTRY_DATA);
+        return BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()).getData(ModDataMaps.THIRST_REGISTRY_DATA);
     }
 
     public static WaterDrinkingContext getWaterDrinkingContextFromBlockHitResult(Level level, BlockPos pos) {

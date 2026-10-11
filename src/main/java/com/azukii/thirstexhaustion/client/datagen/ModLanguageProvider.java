@@ -1,8 +1,8 @@
 package com.azukii.thirstexhaustion.client.datagen;
 
 import com.azukii.thirstexhaustion.ThirstExhaustion;
-import com.azukii.thirstexhaustion.client.config.ThirstExhaustionCommonConfig;
-import com.azukii.thirstexhaustion.client.config.ThirstExhaustionStartupConfig;
+import com.azukii.thirstexhaustion.config.ThirstExhaustionCommonConfig;
+import com.azukii.thirstexhaustion.config.ThirstExhaustionStartupConfig;
 import com.azukii.thirstexhaustion.registry.ModBlocks;
 import com.azukii.thirstexhaustion.registry.ModItems;
 import net.minecraft.data.PackOutput;

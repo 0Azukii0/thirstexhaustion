@@ -1,6 +1,6 @@
 package com.azukii.thirstexhaustion.block.entity;
 
-import com.azukii.thirstexhaustion.client.config.ThirstExhaustionStartupConfig;
+import com.azukii.thirstexhaustion.config.ThirstExhaustionStartupConfig;
 import com.azukii.thirstexhaustion.component.WaterskinComponent;
 import com.azukii.thirstexhaustion.gui.menu.WaterCollectorMenu;
 import com.azukii.thirstexhaustion.recipe.WaterCollectionRecipe;

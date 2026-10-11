@@ -1,7 +1,7 @@
 package com.azukii.thirstexhaustion.client.datagen;
 
 import com.azukii.thirstexhaustion.ThirstExhaustion;
-import com.azukii.thirstexhaustion.client.config.WaterBucketRecipeCondition;
+import com.azukii.thirstexhaustion.config.WaterBucketRecipeCondition;
 import com.azukii.thirstexhaustion.registry.ModBlocks;
 import com.azukii.thirstexhaustion.registry.ModItemTags;
 import com.azukii.thirstexhaustion.registry.ModItems;

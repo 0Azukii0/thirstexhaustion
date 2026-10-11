@@ -1,7 +1,7 @@
 package com.azukii.thirstexhaustion.registry;
 
 import com.azukii.thirstexhaustion.ThirstExhaustion;
-import com.azukii.thirstexhaustion.client.config.WaterBucketRecipeCondition;
+import com.azukii.thirstexhaustion.config.WaterBucketRecipeCondition;
 import com.mojang.serialization.MapCodec;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.conditions.ICondition;

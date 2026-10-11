@@ -1,7 +1,7 @@
 package com.azukii.thirstexhaustion.registry;
 
 import com.azukii.thirstexhaustion.ThirstExhaustion;
-import com.azukii.thirstexhaustion.client.config.ThirstExhaustionStartupConfig;
+import com.azukii.thirstexhaustion.config.ThirstExhaustionStartupConfig;
 import com.azukii.thirstexhaustion.component.WaterskinComponent;
 import com.azukii.thirstexhaustion.item.WaterskinItem;
 import net.minecraft.core.component.DataComponents;
