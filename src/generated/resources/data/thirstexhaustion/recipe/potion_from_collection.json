@@ -1,0 +1,14 @@
+{
+  "type": "thirstexhaustion:water_collection",
+  "filling_time": 300,
+  "ingredient": "minecraft:glass_bottle",
+  "is_filtered": false,
+  "result": {
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "minecraft:water"
+      }
+    },
+    "id": "minecraft:potion"
+  }
+}

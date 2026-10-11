@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "thirstexhaustion:waterskin",
+    "#thirstexhaustion:waterskin_filters"
+  ],
+  "result": {
+    "id": "thirstexhaustion:waterskin"
+  }
+}

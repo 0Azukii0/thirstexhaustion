@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "thirstexhaustion:block/water_collector"
+    }
+  }
+}

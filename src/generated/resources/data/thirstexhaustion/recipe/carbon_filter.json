@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "#minecraft:coals",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "SCS"
+  ],
+  "result": {
+    "id": "thirstexhaustion:carbon_filter"
+  }
+}

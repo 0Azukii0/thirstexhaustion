@@ -1,0 +1,9 @@
+{
+  "type": "thirstexhaustion:water_collection",
+  "filling_time": 600,
+  "ingredient": "thirstexhaustion:waterskin",
+  "is_filtered": true,
+  "result": {
+    "id": "thirstexhaustion:waterskin"
+  }
+}

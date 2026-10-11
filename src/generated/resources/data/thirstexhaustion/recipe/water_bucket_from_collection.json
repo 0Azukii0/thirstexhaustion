@@ -1,0 +1,14 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thirstexhaustion:water_bucket_recipe_enabled"
+    }
+  ],
+  "type": "thirstexhaustion:water_collection",
+  "filling_time": 900,
+  "ingredient": "minecraft:bucket",
+  "is_filtered": false,
+  "result": {
+    "id": "minecraft:water_bucket"
+  }
+}

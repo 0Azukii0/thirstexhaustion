@@ -2,20 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": "minecraft:charcoal",
     "L": "minecraft:leather",
     "N": "#c:nuggets",
     "S": "minecraft:string"
   },
   "pattern": [
     "SLN",
-    "LCL",
+    "L L",
     " L "
   ],
   "result": {
-    "components": {
-      "minecraft:damage": 3
-    },
     "id": "thirstexhaustion:waterskin"
   }
 }

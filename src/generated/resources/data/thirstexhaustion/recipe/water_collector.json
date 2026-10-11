@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": "minecraft:cobblestone"
+  },
+  "pattern": [
+    "C C",
+    "C C",
+    "CCC"
+  ],
+  "result": {
+    "id": "thirstexhaustion:water_collector"
+  }
+}

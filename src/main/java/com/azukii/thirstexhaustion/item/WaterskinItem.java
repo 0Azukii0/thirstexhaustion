@@ -1,10 +1,10 @@
 package com.azukii.thirstexhaustion.item;
 
-import com.azukii.thirstexhaustion.attachment.ModAttachments;
-import com.azukii.thirstexhaustion.component.ModComponents;
-import com.azukii.thirstexhaustion.component.ThirstData;
-import com.azukii.thirstexhaustion.component.WaterDrinkingContext;
 import com.azukii.thirstexhaustion.component.WaterskinComponent;
+import com.azukii.thirstexhaustion.core.ThirstData;
+import com.azukii.thirstexhaustion.core.WaterDrinkingContext;
+import com.azukii.thirstexhaustion.registry.ModAttachments;
+import com.azukii.thirstexhaustion.registry.ModComponents;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -43,9 +43,9 @@ public class WaterskinItem extends Item {
 
         ItemStack stack = context.getItemInHand();
         WaterskinComponent waterskin = stack.get(ModComponents.WATERSKIN);
-        if (waterskin != null && waterskin.level() < waterskin.maxLevel()) {
+        if (waterskin != null && waterskin.thirstLevel() < waterskin.thirstMaxLevel() && waterskin.filterLevel() > 0) {
             stack.hurtAndBreak(1, player, context.getHand());
-            stack.set(ModComponents.WATERSKIN.get(), new WaterskinComponent(waterskin.level()+1, waterskin.maxLevel()));
+            stack.set(ModComponents.WATERSKIN.get(), new WaterskinComponent(waterskin.thirstLevel() + 1, waterskin.thirstMaxLevel(), waterskin.filterLevel() - 1));
         }
 
         return InteractionResult.SUCCESS;
@@ -56,12 +56,12 @@ public class WaterskinItem extends Item {
         if (!(entity instanceof ServerPlayer serverPlayer)) return itemStack;
 
         WaterskinComponent waterskin = itemStack.get(ModComponents.WATERSKIN.get());
-        if (waterskin == null || waterskin.level() == 0) return itemStack;
+        if (waterskin == null || waterskin.thirstLevel() == 0) return itemStack;
 
         ThirstData data = serverPlayer.getData(ModAttachments.THIRST_DATA);
         if (!data.canDrink()) return itemStack;
 
-        itemStack.set(ModComponents.WATERSKIN.get(), new WaterskinComponent(waterskin.level() - 1, waterskin.maxLevel()));
+        itemStack.set(ModComponents.WATERSKIN.get(), new WaterskinComponent(waterskin.thirstLevel() - 1, waterskin.thirstMaxLevel(), waterskin.filterLevel()));
         data.addThirstLevel(serverPlayer, 1, WaterDrinkingContext.CLEAN);
 
         return itemStack;

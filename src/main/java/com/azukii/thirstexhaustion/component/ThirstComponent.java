@@ -1,7 +1,9 @@
 package com.azukii.thirstexhaustion.component;
 
-import com.azukii.thirstexhaustion.data.ModDataMapProvider;
-import com.azukii.thirstexhaustion.data.ModDataMaps;
+import com.azukii.thirstexhaustion.client.datagen.ModDataMapProvider;
+import com.azukii.thirstexhaustion.core.WaterDrinkingContext;
+import com.azukii.thirstexhaustion.registry.ModComponents;
+import com.azukii.thirstexhaustion.registry.ModDataMaps;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import io.netty.buffer.ByteBuf;
@@ -22,7 +24,7 @@ import org.jspecify.annotations.Nullable;
 
 public record ThirstComponent(int level, WaterDrinkingContext context) implements TooltipComponent {
     public static final Codec<ThirstComponent> CODEC = RecordCodecBuilder.create(builder -> builder.group(
-            Codec.INT.fieldOf("level").forGetter(ThirstComponent::level),
+            Codec.INT.fieldOf("thirstlevel").forGetter(ThirstComponent::level),
             WaterDrinkingContext.CODEC.fieldOf("context").forGetter(ThirstComponent::context)
     ).apply(builder, ThirstComponent::new));
 

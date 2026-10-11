@@ -1,0 +1,9 @@
+{
+  "type": "thirstexhaustion:water_collection",
+  "filling_time": 300,
+  "ingredient": "minecraft:bowl",
+  "is_filtered": false,
+  "result": {
+    "id": "thirstexhaustion:water_bowl"
+  }
+}

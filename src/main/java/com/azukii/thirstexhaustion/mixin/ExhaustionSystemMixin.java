@@ -1,7 +1,7 @@
 package com.azukii.thirstexhaustion.mixin;
 
-import com.azukii.thirstexhaustion.attachment.ModAttachments;
-import com.azukii.thirstexhaustion.component.ThirstData;
+import com.azukii.thirstexhaustion.core.ThirstData;
+import com.azukii.thirstexhaustion.registry.ModAttachments;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.food.FoodData;
 import org.objectweb.asm.Opcodes;

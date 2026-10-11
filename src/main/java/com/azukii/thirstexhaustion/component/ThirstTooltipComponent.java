@@ -1,6 +1,7 @@
 package com.azukii.thirstexhaustion.component;
 
 import com.azukii.thirstexhaustion.ThirstExhaustion;
+import com.azukii.thirstexhaustion.core.WaterDrinkingContext;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
@@ -8,11 +9,11 @@ import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.resources.Identifier;
 
 public class ThirstTooltipComponent implements ClientTooltipComponent {
-    private static final Identifier EMPTY = Identifier.fromNamespaceAndPath(ThirstExhaustion.MODID, "hud/thirst_empty");
-    private static final Identifier FULL = Identifier.fromNamespaceAndPath(ThirstExhaustion.MODID, "hud/thirst_full");
-    private static final Identifier FULL_DIRTY = Identifier.fromNamespaceAndPath(ThirstExhaustion.MODID, "hud/thirst_full_dirty");
-    private static final Identifier HALF = Identifier.fromNamespaceAndPath(ThirstExhaustion.MODID, "hud/thirst_half");
-    private static final Identifier HALF_DIRTY = Identifier.fromNamespaceAndPath(ThirstExhaustion.MODID, "hud/thirst_half_dirty");
+    private static final Identifier EMPTY = Identifier.fromNamespaceAndPath(ThirstExhaustion.MOD_ID, "hud/thirst_empty");
+    private static final Identifier FULL = Identifier.fromNamespaceAndPath(ThirstExhaustion.MOD_ID, "hud/thirst_full");
+    private static final Identifier FULL_DIRTY = Identifier.fromNamespaceAndPath(ThirstExhaustion.MOD_ID, "hud/thirst_full_dirty");
+    private static final Identifier HALF = Identifier.fromNamespaceAndPath(ThirstExhaustion.MOD_ID, "hud/thirst_half");
+    private static final Identifier HALF_DIRTY = Identifier.fromNamespaceAndPath(ThirstExhaustion.MOD_ID, "hud/thirst_half_dirty");
 
     private final ThirstComponent component;
 
