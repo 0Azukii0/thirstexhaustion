@@ -79,8 +79,8 @@ configurations {
 }
 
 dependencies {
-    compileOnly "maven.modrinth:appleskin:3.0.09+mc26.1"
-    runtimeOnly "maven.modrinth:appleskin:3.0.09+mc26.1"
+    compileOnly "maven.modrinth:appleskin:3.0.9+mc26.1"
+    runtimeOnly "maven.modrinth:appleskin:3.0.9+mc26.1"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
