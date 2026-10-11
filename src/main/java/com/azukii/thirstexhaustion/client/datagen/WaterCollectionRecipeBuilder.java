@@ -1,7 +1,7 @@
 package com.azukii.thirstexhaustion.client.datagen;
 
 import com.azukii.thirstexhaustion.recipe.WaterCollectionRecipe;
-import net.minecraft.advancements.triggers.Criterion;
+import net.minecraft.advancements.Criterion;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
