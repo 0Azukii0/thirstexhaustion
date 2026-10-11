@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.141'
+    id 'net.neoforged.moddev' version '2.0.148'
     id 'idea'
 }
 
@@ -79,8 +79,8 @@ configurations {
 }
 
 dependencies {
-    compileOnly "maven.modrinth:appleskin:3.0.9+mc26.1"
-    runtimeOnly "maven.modrinth:appleskin:3.0.9+mc26.1"
+    compileOnly "maven.modrinth:appleskin:3.0.10+mc26.2"
+    runtimeOnly "maven.modrinth:appleskin:3.0.10+mc26.2"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

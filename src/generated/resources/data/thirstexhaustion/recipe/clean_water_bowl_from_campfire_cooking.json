@@ -1,7 +1,6 @@
 {
   "type": "minecraft:campfire_cooking",
   "category": "food",
-  "cookingtime": 100,
   "experience": 0.35,
   "ingredient": "thirstexhaustion:water_bowl",
   "result": {
