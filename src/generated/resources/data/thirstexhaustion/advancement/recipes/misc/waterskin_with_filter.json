@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "thirstexhaustion:waterskin_with_filter"
+        "recipes": "thirstexhaustion:waterskin_with_filter"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

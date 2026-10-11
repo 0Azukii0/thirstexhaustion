@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "thirstexhaustion:potion_from_collection"
+        "recipes": "thirstexhaustion:potion_from_collection"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

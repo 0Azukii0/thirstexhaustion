@@ -8,7 +8,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "thirstexhaustion:water_bucket_from_collection"
+        "recipes": "thirstexhaustion:water_bucket_from_collection"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

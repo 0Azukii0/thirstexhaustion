@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "thirstexhaustion:waterskin"
+        "recipes": "thirstexhaustion:waterskin"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

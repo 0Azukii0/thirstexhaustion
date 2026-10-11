@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "thirstexhaustion:carbon_filter"
+        "recipes": "thirstexhaustion:carbon_filter"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

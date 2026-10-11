@@ -20,8 +20,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .addTag(ModItemTags.WATER_COLLECTOR_FILTERS)
                 .addTag(ModItemTags.WATERSKIN_FILTERS);
         this.tag(ModItemTags.WATER_COLLECTOR_FILTERS)
-                .add(ModItems.CARBON_FILTER.get());
+                .add(ModItems.CARBON_FILTER.key());
         this.tag(ModItemTags.WATERSKIN_FILTERS)
-                .add(ModItems.CARBON_FILTER.get());
+                .add(ModItems.CARBON_FILTER.key());
     }
 }

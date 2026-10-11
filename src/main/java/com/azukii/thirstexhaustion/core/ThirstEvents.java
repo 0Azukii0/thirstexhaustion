@@ -13,6 +13,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -148,7 +149,7 @@ public class ThirstEvents {
                     player.setItemInHand(event.getHand(), newStack);
                 } else {
                     if (!player.getInventory().add(newStack)) {
-                        player.drop(newStack, false);
+                        player.drop(newStack, false, Prediction.PREDICTED);
                     }
                 }
 
@@ -187,7 +188,7 @@ public class ThirstEvents {
     }
 
     @SubscribeEvent
-    public static void onBrewingPost(PotionBrewEvent.Post event) {
+    public static void onBrewingPost(PotionBrewEvent.Pre event) {
         for (var entry : pendingThirst.entrySet()) {
             int i = entry.getKey();
             ThirstComponent thirst = entry.getValue();

@@ -21,7 +21,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.CLEAN_WATER_BOWL.asItem(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.CLEAN_WATER_BOTTLE.asItem(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.WATERSKIN.asItem(), ModelTemplates.FLAT_ITEM);
-        blockModels.createTrivialBlock(ModBlocks.WATER_COLLECTOR.get(), TexturedModel.CUBE_TOP_BOTTOM);
+        blockModels.createTrivialBlock(ModBlocks.WATER_COLLECTOR.get(), TexturedModel.CUBE_BOTTOM_TOP);
         itemModels.generateFlatItem(ModItems.CARBON_FILTER.asItem(), ModelTemplates.FLAT_ITEM);
     }
 }

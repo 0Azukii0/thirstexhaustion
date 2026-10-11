@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "thirstexhaustion:clean_water_bottle_from_smelting"
+        "recipes": "thirstexhaustion:clean_water_bottle_from_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

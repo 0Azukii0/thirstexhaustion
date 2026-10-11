@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "thirstexhaustion:clean_water_bottle_from_filtration"
+        "recipes": "thirstexhaustion:clean_water_bottle_from_filtration"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

@@ -21,15 +21,8 @@ import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
 public class WaterCollectorBlock extends BaseEntityBlock {
-    private static final MapCodec<WaterCollectorBlock> CODEC = simpleCodec(WaterCollectorBlock::new);
-
     public WaterCollectorBlock(BlockBehaviour.Properties properties) {
         super(properties);
-    }
-
-    @Override
-    protected @NonNull MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
     }
 
     @Override

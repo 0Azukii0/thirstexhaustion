@@ -34,7 +34,7 @@ public class ThirstExhaustion {
     public ThirstExhaustion(IEventBus modEventBus, ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         container.registerConfig(ModConfig.Type.STARTUP, ThirstExhaustionStartupConfig.CONFIG_SPEC);
-        container.registerConfig(ModConfig.Type.COMMON, ThirstExhaustionCommonConfig.CONFIG_SPEC);
+        container.registerConfig(ModConfig.Type.SYNCED, ThirstExhaustionCommonConfig.CONFIG_SPEC);
 
         ModAttachments.init(modEventBus);
         ModComponents.init(modEventBus);

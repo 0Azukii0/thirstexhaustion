@@ -54,7 +54,7 @@ public record ThirstComponent(int level, WaterDrinkingContext context) implement
         if (fluid.is(FluidTags.WATER)) {
             Holder<Biome> biome = level.getBiome(pos);
             if (biome.is(BiomeTags.IS_RIVER) && fluid.isSource()) context = WaterDrinkingContext.RIVER;
-            if (biome.is(BiomeTags.IS_OCEAN) || biome == Biomes.FROZEN_RIVER) context = WaterDrinkingContext.OCEAN;
+            if (biome.is(BiomeTags.IS_OCEAN) || biome.is(Biomes.FROZEN_RIVER)) context = WaterDrinkingContext.OCEAN;
             else if (fluid.isSource()) context = WaterDrinkingContext.STILL_WATER;
             if (!fluid.isSource()) context = WaterDrinkingContext.FLOWING_WATER;
         }

@@ -5,14 +5,20 @@ import com.azukii.thirstexhaustion.config.WaterBucketRecipeCondition;
 import com.azukii.thirstexhaustion.registry.ModBlocks;
 import com.azukii.thirstexhaustion.registry.ModItemTags;
 import com.azukii.thirstexhaustion.registry.ModItems;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.MultiRegistryBootstrap;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
@@ -20,17 +26,20 @@ import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient;
 import org.jspecify.annotations.NonNull;
 
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
-    protected ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-        super(registries, output);
+
+    protected ModRecipeProvider(BootstrapContext<Recipe<?>> recipeOutput, BootstrapContext<Advancement> advancementOutput) {
+        super(recipeOutput, advancementOutput);
     }
 
     @Override
@@ -100,22 +109,5 @@ public class ModRecipeProvider extends RecipeProvider {
 
     protected String getModdedItemName(ItemLike itemLike, String suffix) {
         return ThirstExhaustion.MOD_ID + ":" + getItemName(itemLike) + suffix;
-    }
-
-    public static class Runner extends RecipeProvider.Runner {
-
-        public Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registries) {
-            super(packOutput, registries);
-        }
-
-        @Override
-        protected @NonNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider registries, @NonNull RecipeOutput output) {
-            return new ModRecipeProvider(registries, output);
-        }
-
-        @Override
-        public @NonNull String getName() {
-            return "Mod Recipe JSONs";
-        }
     }
 }
