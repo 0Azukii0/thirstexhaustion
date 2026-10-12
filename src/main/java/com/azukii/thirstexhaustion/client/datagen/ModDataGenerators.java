@@ -16,7 +16,8 @@ public class ModDataGenerators {
     static void gatherData(GatherDataEvent.Client event) {
         event.createProvider(ModSpriteSourceProvider::new);
         event.createProvider(ModDataMapProvider::new);
-        event.createProvider(ModLanguageProvider::new);
+        event.createProvider((output, _) -> ModLanguageProvider.english(output));
+        event.createProvider((output, _) -> ModLanguageProvider.french(output));
         event.createProvider(ModModelProvider::new);
         event.createProvider(ModItemTagsProvider::new);
     }
